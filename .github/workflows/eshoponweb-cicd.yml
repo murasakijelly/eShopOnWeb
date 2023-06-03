@@ -6,7 +6,7 @@ on: [push, workflow_dispatch]
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
   RESOURCE-GROUP: rg-az400-eshoponweb-murasaki
-  LOCATION: westeurope
+  LOCATION: uksouth
   TEMPLATE-FILE: .azure/bicep/webapp.bicep
   SUBSCRIPTION-ID: 58508862-c980-4f9d-becf-beb12d5b4607
   WEBAPP-NAME: az400-webapp-murasaki
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: buildandtest
     environment:
-      name: 'Development'
+      name: 'Development1'
     steps:
     
     #Download the publish files created in previous job
